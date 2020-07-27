@@ -7,7 +7,7 @@ import { Candidate } from '../models/candidate';
   styleUrls: ['./candidate-list.component.css'],
 })
 export class CandidateListComponent implements OnInit {
-  candidateList :any[] // 查到整筆
+  candidateList: any[] // 查到整筆
   candidate: Candidate;  // 單筆物件
   cols: any[];
   displayDialog: boolean;
@@ -24,11 +24,9 @@ export class CandidateListComponent implements OnInit {
   }
   // 查詢
   getAllCandidates() {
-    this.candidateService.getAllCandidates().subscribe(
-      data => {
-        this.candidateList = data.data;
-      }
-    );
+    this.candidateService.getAllCandidates().subscribe((response: any) => {
+      this.candidateList = response.data;
+    });
   }
   // 編輯所選的物件
   selectCandidate(candidate: Candidate) {
