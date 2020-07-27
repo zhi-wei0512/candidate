@@ -1,0 +1,39 @@
+<p-table [columns]="cols" [value]="candidateList" selectionMode="single" [paginator]="true" [rows]="15" >
+  <ng-template pTemplate="caption" >
+    List of candidateList
+  </ng-template>
+  <ng-template pTemplate="header" let-columns>
+
+    <tr>
+      <th *ngFor="let col of columns" [pSortableColumn]="col.field">
+        {{col.header}}
+      </th>
+      <th>編輯</th>
+      <th>刪除</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-rowData let-columns="columns">
+    <tr [pSelectableRow]="rowData">
+      <td>{{rowData.caseCode}}</td>
+      <td>{{rowData.caseName}}</td>
+      <td > {{rowData.caseUserName}}</td>
+      <td class="aaa">{{rowData.description}}</td>
+      <td>
+        <p-button   (click)="selectCandidate(rowData)" icon="pi pi-user-edit" class="ui-button-danger" ></p-button>
+      </td>
+      <td> <button type="button" pButton (click)="deleteCandidate(rowData)" icon="pi pi-trash"
+          class="ui-button-danger"></button>
+      </td>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="summary" let-rowData>
+    <div style="text-align:left">
+      <button type="button" pButton icon="pi pi-plus" (click)="addNewCandidate()" label="Add"></button>
+      <button type="button" pButton icon="pi pi-refresh" (click)="getAllCandidates()"></button>
+    </div>
+  </ng-template>
+</p-table>
+<div *ngIf="candidate">
+  <app-candidate-detail [candidate]="candidate" (saveCandidateEvent)="saveCandidate($event)"
+    (closeDialogEvent)="closeDialogForm()"></app-candidate-detail>
+</div>

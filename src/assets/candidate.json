@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "大晴",
+      "dob": "1982-02-25T00:00:00",
+      "gender": "F",
+      "favouriteCollection": [
+        {
+          "favKey": "Game",
+          "favValue": "Chess"
+        },
+        {
+          "favKey": "Sports",
+          "favValue": "Cricket"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "大熊",
+      "dob": "1982-02-23T00:00:00",
+      "gender": "F",
+      "favouriteCollection": [
+        {
+          "favKey": "Game",
+          "favValue": "Chess"
+        },
+        {
+          "favKey": "Sports",
+          "favValue": "Cricket"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "小明",
+      "dob": "1982-02-23T00:00:00",
+      "gender": "M",
+      "favouriteCollection": [
+        {
+          "favKey": "Game",
+          "favValue": "Chess"
+        },
+        {
+          "favKey": "Sports",
+          "favValue": "Cricket"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "多啦A夢",
+      "dob": "1982-02-23T00:00:00",
+      "gender": "M",
+      "favouriteCollection": [
+        {
+          "favKey": "Game",
+          "favValue": "Chess"
+        },
+        {
+          "favKey": "Sports",
+          "favValue": "Cricket"
+        }
+      ]
+    }
+  ]
+}

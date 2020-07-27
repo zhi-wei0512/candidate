@@ -1,0 +1,6 @@
+.aaa {
+overflow: hidden;  /*內容過長無法置入 以 ...省略*/
+text-overflow: ellipsis;
+white-space: nowrap;
+/* color: red; */
+}

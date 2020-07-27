@@ -1,0 +1,47 @@
+
+<p-dialog header="Candidate Detail" [(visible)]="display" modal="modal" width="500" (onHide)="closeFormDialog()"
+  [responsive]="true">
+  <form #candiateForm="ngForm" style="height: 400px;width:500px">
+    <div class="p-grid ui-fluid" *ngIf="candidate">
+
+      <div class="p-col-12 p-md-4">
+        <div class="p-col-6">
+          <h3 class="first">序號</h3>
+        </div>
+        <div class="ui-inputgroup">
+          <input type="caseCode" pInputText [(ngModel)]="candidate.caseCode" name="caseCode">
+        </div>
+      </div>
+      <div class="p-col-12 p-md-4">
+        <div class="p-col-6">
+          <h3 class="first">事項</h3>
+        </div>
+        <div class="ui-inputgroup">
+          <input type="text" pInputText [(ngModel)]="candidate.caseName" name="caseName">
+        </div>
+      </div>
+      <div class="p-col-12 p-md-4">
+        <div class="p-col-6">
+          <h3 class="first">姓名</h3>
+        </div>
+        <div class="ui-inputgroup">
+          <input type="text" pInputText  [(ngModel)]="candidate.caseUserName" name="caseUserName">
+        </div>
+      </div>
+      <div class="p-col-12 p-md-4">
+        <div class="p-col-6">
+          <h3 class="first">描述</h3>
+        </div>
+        <div class="ui-inputgroup">
+          <input type="text" pInputText  [(ngModel)]="candidate.description" name="description">
+        </div>
+      </div>
+    </div>
+  </form>
+  <p-footer>
+    <button type="button" pButton icon="pi pi-check" label="Save" (click)="saveCandidateInfo()"
+      ></button>
+    <button type="button" pButton icon="pi pi-times" label="Cancel" (click)="closeFormDialog()"
+      class="ui-button-danger"></button>
+  </p-footer>
+</p-dialog>
